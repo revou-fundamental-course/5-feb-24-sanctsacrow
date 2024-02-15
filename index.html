@@ -3,53 +3,10 @@
         <title>
             Celcius to Fahrenheit Easy Calculator
         </title>
-        <style>
-            
-                body input[type="text"]{
-                    border-radius: 5px;
-                }
-                span{
-                    color: red;
-                }
-        </style>
-        <script type="text/javascript">
-            function ftof()
-            {
-                c=document.getElementById('txtc').value;
-                //alert(c);
-                if (isNaN(c)||c=='') 
-                {
-                    alert("Harus isi angka");
-                    document.getElementById('txtc').value=0;
-                    
-                }
-                else{
-                    tof=(eval(c)/5*9)+32;
-                    document.getElementById('txtf').value=tof;
-                }
-            }
-            function ftoc()
-            {
-                f=document.getElementById('txtf').value;
-                if (isNaN(f)||f=='') 
-                {
-                    alert("Harus isi angka");
-                    document.getElementById('txtf').value=0;
-                   
-                }
-                else
-                {
-                    toc=(eval(f)-32)/9*5;
-                    document.getElementById('txtc').value=toc;
-
-                }
-            }
-            function clear()
-            {
-                document.getElementById('txtc').value='0';
-                document.getElementById('txtf').value='0';
-            }
-        </script>
+        
+	    <link type="text/css" href="style.css" rel="stylesheet" />	
+        
+	    <script type="text/javascript" src="javascript.js" ></script>
     </head>
     <body>
         <table>
@@ -62,7 +19,7 @@
                 <td><input type="text" name="txtf" id="txtf" onFocus="document.getElementById('holder2').style.display='';document.getElementById('holder1').style.display='none';" onBlur="ftoc();document.getElementById('holder2').style.display='none';"> &nbsp;<span id="holder2" style="display: none;">F to C: (f-32) x 5/9</span></td>
             </tr>
             <tr>
-                <td colspan='2'><input type="button" value="Konversi" OnClick="ftof()"> <input type="button" value="Reverse" OnClick="ftoc()"> <input type="button" value="Clear" OnClick="clear()"></td>
+                <td colspan='2'><input type="button" value="Konversi" OnClick="ftof()"> <input type="button" value="Reverse" OnClick="ftoc()"> <input type="button" value="Clear" onclick="fclear()"></td>
             </tr>
         </table>
         

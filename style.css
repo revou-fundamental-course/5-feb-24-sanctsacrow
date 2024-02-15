@@ -1,0 +1,6 @@
+body input[type="text"]{
+    border-radius: 5px;
+}
+span{
+    color: red;
+}
